@@ -50,10 +50,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     end
   end
 
-  ansible_pub = File.read(File.join(Dir.home, ".ssh", "ansible.pub"))
+  lab_pub = File.read(File.join(Dir.home, ".ssh", "lab.pub"))
 
   config.vm.provision :shell,
-        :inline => "echo 'appending SSH public key to ~vagrant/.ssh/authorized_keys' && echo '#{ansible_pub }' >> /home/vagrant/.ssh/authorized_keys && chmod 600 /home/vagrant/.ssh/authorized_keys"
+        :inline => "echo 'appending SSH public key to ~vagrant/.ssh/authorized_keys' && echo '#{lab_pub }' >> /home/vagrant/.ssh/authorized_keys && chmod 600 /home/vagrant/.ssh/authorized_keys"
 
   config.ssh.insert_key = false
 end

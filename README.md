@@ -6,3 +6,10 @@ The `Vagrantfile` has an array of servers defined, each with a name, IP Address,
 system. This array is used to create the VMs.
 
 Finally a GPG public key is added to each VMs authorized_keys file, to allow easy access.
+
+## Dependencies
+The provider used for the VMs is `libvirt`. The `vagrant-libvirt` plugin needs to be installed.
+
+   vagrant plugin install vagrant-libvirt
+
+

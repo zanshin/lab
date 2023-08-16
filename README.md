@@ -10,6 +10,6 @@ Finally a GPG public key is added to each VMs authorized_keys file, to allow eas
 ## Dependencies
 The provider used for the VMs is `libvirt`. The `vagrant-libvirt` plugin needs to be installed.
 
-   vagrant plugin install vagrant-libvirt
+    vagrant plugin install vagrant-libvirt
 
 
